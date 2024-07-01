@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DistributionListGenerator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0b0a9f0a13f75300faad3059a9a289448cd64191")]
 [assembly: System.Reflection.AssemblyProductAttribute("DistributionListGenerator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DistributionListGenerator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
