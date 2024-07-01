@@ -1,0 +1,57 @@
+﻿@page
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
+@model IndexModel
+@{
+    ViewData["Title"] = Configuration["application_name"] + " " + Configuration["Version"];
+    ViewData["Description"] = "Quickly retrieve a set of email addresses for the purpose of communicating with them.";
+}
+
+<div class="container>
+    <div class="header">
+        <h1 class="display-4">Welcome to @ViewData["Title"]</h1>
+        <p>
+        @ViewData["Description"]<br />
+        </p>
+    </div>
+    <div class="sidebar">
+        <form action="" method="post">
+            <label asp-for="AcademicPeriod">Academic Period:</label>
+            <select name="AcademicPeriod" asp-for="AcademicPeriod" asp-items=Model.Academic_Periods>
+                <option value="">Choose an Academic Period</option>
+            </select>
+            <br />
+            <label asp-for="ChosenAcademicProgram">Academic Programs:</label>
+            <select name="AcademicPrograms" asp-for="ChosenAcademicProgram" asp-items=Model.AcademicPrograms>
+                <option value="">Choose an Academic Program</option>
+            </select>
+            <br />
+            <label asp-for="dr.department"></label>
+            <input asp-for="dr.department" class="form-control" />
+            <span asp-validation-for="dr.department"></span>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <div class="content">
+        <table>
+            <tr>
+                <th>Entry</th>
+                <th>Name</th>
+                <th>EMail</th>
+            </tr>
+        @{
+            int counter = 1;
+        }
+        @foreach (var item in Model.people)
+        {
+                <tr>
+                    <td>@(counter++)</td>
+                    <td>@item.name</td>
+                    <td>@item.email</td>
+                </tr>
+        }
+        </table>
+    </div>
+</div>
+
+
