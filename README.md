@@ -1,6 +1,8 @@
 ﻿Distribution List Generator
 Version 2.0
-Given a selected model and application of filters, this list will generate a a list of names and email addresses meeting that meet the criteria.
+Given a selected model and application of filters, this list will generate a list of names and :email: addresses that meet the criteria. Part of my 2023-2024 release time for MVNU.  
+
+Right now this is more of a playground than a serious app, but I'm working on getting it to become something useful and learning a new tech stack in the process. 
 
 Tooling:
 Visual Studio 2022 with ASP.NET Core 8.0
